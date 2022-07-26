@@ -1,8 +1,23 @@
 # Quantum walk simulation on a line using Hadamard coin
 ***
 
-- Requires linear algebra package for identity matrices.
-- Import it by "using LinearAlgebra".
+The protocol for the walk is to flip a quantum coin followed by the shift
+operator. THe unitary evolution can then be writeen as $\hat{U}=\hat{T}\hat{C}$. Here $\hat{C}$ is the Hadamard
+operator,
+
+$$
+\begin{equation}
+\hat{C}=\frac{1}{\sqrt{2}}\left(\left|\uparrow\right\rangle \left\langle \uparrow\right|+\left|\uparrow\right\rangle \left\langle \downarrow\right|+\left|\downarrow\right\rangle \left\langle \uparrow\right|-\left|\downarrow\right\rangle \left\langle \downarrow\right|\right),
+\end{equation}
+$$
+
+and $\hat{T}$ is the translation operator.
+
+$$
+\begin{equation}
+\hat{T}=\sum_{m=-\infty}^{\infty}\left(\left|\uparrow\right\rangle \left\langle \uparrow\right|\otimes\left|m+1\right\rangle \left\langle m\right|+\left|\downarrow\right\rangle \left\langle \downarrow\right|\otimes\left|m-1\right\rangle \left\langle m\right|\right).
+\end{equation}
+$$
 
 An example for 100 steps in shown here.
 
