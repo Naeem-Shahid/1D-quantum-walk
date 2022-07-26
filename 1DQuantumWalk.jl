@@ -1,3 +1,4 @@
+using LinearAlgebra
 function qwalk(steps)
     N = steps                                                    #steps
     P = 2 * N + 1                                                #positions
